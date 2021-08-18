@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      body {
+        font-family: Avenir;
+        font-size: 15px;
+      }
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .cell-heading {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .table-center {
+        margin: 0 auto;
+      }
+
+      .container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background: lightgray;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .inner-container {
+        height: 100%;
+        width: 100%;
+      }
+
+      .table {
+        height: 100%;
+      }
+
+      .flexbox {
+        display: flex;
+        align-items: center;
+      }
+
+      .line-height {
+        line-height: 190px;
+      }
+
+      .inline-block {
+        line-height: 190px;
+      }
+
+      .inline-block span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+      }
+
+      .table-cell {
+        display: table;
+      }
+
+      .table-cell span {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .absolute-auto {
+        position: relative;
+      }
+
+      .absolute-auto span {
+        height: 135px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .absolute {
+        position: relative;
+      }
+
+      .padding span {
+        display: block;
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="center">HTML Vertical Centering Alignment Chart</h1>
+
+    <table class="table-center">
+      <tbody>
+        <tr>
+          <td>
+            <p class="cell-heading">Lawful Good</p>
+            <div class="container" style="background: #66ccff">
+              <div class="inner-container flexbox">
+                <span>
+                  display: flex;<br/>
+                  align-items: center;<br/>
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">Neutral Good</p>
+            <div class="container" style="background: #7fe5e5">
+              <div class="inner-container table-cell">
+                <span>
+                  display: table-cell;<br/>
+                  vertical-align: middle;
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">Chaotic Good</p>
+            <div class="container" style="background: #99ffcc">
+              <div class="inner-container">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td valign="middle">
+                        &lt;td valign="middle"&gt;
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="cell-heading">Lawful Neutral</p>
+            <div class="container" style="background: #3399cc">
+              <div class="inner-container absolute-auto">
+                <span>
+                  height: 135px;<br/>
+                  position: absolute;<br/>
+                  top: 0;<br/>
+                  left: 0;<br/>
+                  bottom: 0;<br/>
+                  right: 0;<br/>
+                  margin: auto;
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">True Neutral</p>
+            <div class="container" style="background: #4CB2B2">
+              <div class="inner-container inline-block">
+                <span>
+                  line-height: 190px;<br/>
+                  span {<br/>
+                  &nbsp;&nbsp;display: inline-block;<br/>
+                  &nbsp;&nbsp;vertical-align: middle;<br/>
+                  &nbsp;&nbsp;line-height: normal;<br/>
+                  }
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">Chaotic Neutral</p>
+            <div class="container"  style="background: #66cc99">
+              <div class="inner-container line-height">
+                <span>
+                  line-height: 190px;
+                </span>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="cell-heading">Lawful Evil</p>
+            <div class="container"style="background: #1177AA">
+              <div class="inner-container padding">
+                <span>
+                  display: block;<br/>
+                  padding-top: 70px;
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">Neutral Evil</p>
+            <div class="container" style="background: #197F7F">
+              <div class="inner-container">
+                <br/><br/><br/><br/>
+                <span>
+                  &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;<br/>
+                </span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="cell-heading">Chaotic Evil</p>
+            <div class="container"  style="background: #339966">
+              <div class="inner-container">
+                <img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="60"><br/>
+                <span>
+                  &lt;img src="spacer.gif" width="1" height="60"&gt;
+                </span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="center">
+      Non-evil solutions from <a href="https://stackoverflow.com/q/8865458/477480">https://stackoverflow.com/q/8865458/477480</a>
+    </p>
+  </body>
+</html>
